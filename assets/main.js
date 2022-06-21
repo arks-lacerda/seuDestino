@@ -7,7 +7,7 @@ const answers = [
   "Não conte com isso.",
   "Sem dúvidas!",
   "Pergunte novamente mais tarde.",
-  "Sim, definitivamente!",Answer disappears after 3 seconds
+  "Sim, definitivamente!",
   "Minha resposta é não.",
   "Você pode contar com isso.",
   "Melhor não te dizer agora.",
