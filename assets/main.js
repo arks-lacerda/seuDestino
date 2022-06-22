@@ -1,5 +1,6 @@
 const elementAnswer = document.querySelector("#resposta")
 const inputQuestion = document.querySelector("#inputPergunta")
+const buttonQuestion = document.querySelector("#buttonQuestion")
 const answers = [
   "Certeza!",
   "Não tenho tanta certeza.",
@@ -30,6 +31,8 @@ function askQuestion() {
     return
   }
 
+  buttonQuestion.setAttribute("disabled", true)
+
   const question = "<div>" + inputQuestion.value + "</div>";
 
   // Generate random number
@@ -38,8 +41,10 @@ function askQuestion() {
 
   elementAnswer.innerHTML = question + answers[numberRandom]
 
+  elementAnswer.style.opacity = 1;
   // Answer disappears after 3 seconds
   setTimeout(function() {
     elementAnswer.style.opacity = 0;
+    buttonQuestion.removeAttribute('disabled');
   }, 3000)
 }
